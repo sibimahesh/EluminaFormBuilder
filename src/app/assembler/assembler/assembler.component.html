@@ -1,0 +1,14 @@
+<div class="assembler">
+    <p class="assembler__drag-info">
+        Drag & Drop controls from left to right container
+    </p>
+    <div class="assembler__drop-area" (drop)="drop($event)" (dragover)="allowDrop($event)">
+        <div *ngFor="let control of addedControls" class="assembler__control">
+            {{control.name}}
+            <span class="assembler__remove" (click)="remove(control.name)"> &#10006; </span>
+        </div>
+        <div *ngIf="!addedControls.length" class="assembler__no-controls">
+            Drag & Drop controls from inside this container
+        </div>
+    </div>
+</div>

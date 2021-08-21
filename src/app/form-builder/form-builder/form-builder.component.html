@@ -1,0 +1,15 @@
+<div class="form-builder">
+    <div *ngIf="displayPreview" class="form-builder__overlay" (click)="closePreview()"></div>
+    <div *ngIf="displayPreview" class="form-builder__overview">
+        <app-preview (onClose)="closePreview()">
+            <app-renderer [addedControls]="addedControls"></app-renderer>
+        </app-preview>
+    </div>
+    <div class="form-builder__header">
+        <h2>Angular Machine Test B</h2>
+        <a class="btn" (click)="displayPreview = true;"> Preview </a>
+    </div>
+    <app-controls class="form-builder__controls" (onDragStart)="dragStart($event)"></app-controls>
+    <app-assembler class="form-builder__assembler" (onDropSuccess)="dropSuccess($event)"
+        [addedControls]="addedControls" (onRemoveAddedControl)="removeAddedControl($event)"></app-assembler>
+</div>

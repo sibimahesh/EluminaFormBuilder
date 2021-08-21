@@ -1,0 +1,15 @@
+<div class="renderer">
+    <div *ngFor="let control of addedControls" class="renderer__control">
+        <div class="renderer__control--text" *ngIf="control.type === 'text'">
+            <input type="text" [placeholder]="control.name"/>
+        </div>
+        <div class="renderer__control--dropdown" *ngIf="control.type === 'dropdown'">
+            <select>
+                <option disabled selected>{{control.name}}</option>
+            </select>
+        </div>
+    </div>
+    <div *ngIf="!addedControls.length" class="renderer__no-controls">
+        No controls added
+    </div>
+</div>

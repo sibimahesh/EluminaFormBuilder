@@ -1,0 +1,14 @@
+.controls{
+    height: 100%;
+    width: 100%;
+    border-right: 1px solid;
+}
+
+.control{
+    padding: 10px 20px;
+    width: 250px;
+    background: #d3d3d3;
+    margin: 10px auto;
+    font-size: 1.4rem;
+    cursor: move;
+}

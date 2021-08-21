@@ -1,0 +1,59 @@
+.form-builder{
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+
+    &__controls{
+        width: 300px;
+        height: calc(100% - 80px);
+    }
+
+    &__assembler{
+        width: calc(100% - 300px);
+        height: calc(100% - 100px);
+    }
+
+    &__header{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+        align-items: center;
+        border-bottom: 1px solid;
+        height: 60px;
+    }
+
+    &__overview{
+        position: absolute;
+        width: 50% !important;
+        height: 80%;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        z-index: 9;
+        background: #fff;
+
+    }
+
+    &__overlay{
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        background: #000;
+        opacity: 0.3;
+    }
+}
+
+.btn{
+    cursor: pointer;
+    padding: 10px;
+    width: 100px;
+    background: linear-gradient(to top left, #084197, #d3d3d3);
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: -14px -4px 16px #ddddddc4
+}

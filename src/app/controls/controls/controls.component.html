@@ -1,0 +1,5 @@
+<div class="controls">
+    <div class="control" *ngFor="let control of Controls" draggable="true" (drag)="dragStart(control)">
+        {{control.label}}
+    </div>
+</div>
